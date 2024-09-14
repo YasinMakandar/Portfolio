@@ -67,13 +67,13 @@ const Hero = () => {
                             </span>
                             <br />
                             <span
-                                className={`text-6xl md:text-8xl lg:text-9xl inline-block subpixel-antialiased ${activeClass.thirdSpan ? 'first-word-gradient' : ''}`}
+                                className={`text-6xl md:text-8xl lg:text-9xl inline-block subpixel-antialiased ${activeClass.secondSpan ? 'first-word-gradient' : ''}`}
                             >
                                 web
                             </span>
                             <br />
                             <span
-                                className={`pb-4 text-6xl md:text-8xl lg:text-9xl inline-block subpixel-antialiased ${activeClass.secondSpan ? 'second-word-gradient' : ''}`}
+                                className={`pb-4 text-6xl md:text-8xl lg:text-9xl inline-block subpixel-antialiased ${activeClass.thirdSpan ? 'second-word-gradient' : ''}`}
                             >
                                 developer
                             </span>

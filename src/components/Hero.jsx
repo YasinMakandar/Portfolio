@@ -41,12 +41,27 @@ const Hero = () => {
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
 
-        // Open the modal after the form is submitted
-        document.getElementById("my-modal").checked = true;
-    };
+    //     // Open the modal after the form is submitted
+    //     document.getElementById("my-modal").checked = true;
+    // };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+      
+        const formData = new FormData(event.target);
+      
+      
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+        .then(() => console.log('Form successfully submitted'))
+        .catch((error) => alert(error));
+      };
 
 
 
@@ -556,7 +571,7 @@ const Hero = () => {
                             data-netlify="true"
                             onSubmit={handleSubmit}
                             className="p-10 card bg-base-200"
-                            netlify hidden
+
                         >
                             {/* Hidden input for Netlify form handling */}
                             <input type="hidden" name="form-name" value="contact" />

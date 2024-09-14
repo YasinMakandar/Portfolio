@@ -43,17 +43,17 @@ const Hero = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         // Open the modal after the form is submitted
         document.getElementById("my-modal").checked = true;
-      };
-      
-      
-    
-      const closeModal = () => {
+    };
+
+
+
+    const closeModal = () => {
         document.getElementById("my-modal").checked = false; // Uncheck the modal to close it
-      };
-      
+    };
+
 
     return (
         <>
@@ -538,7 +538,7 @@ const Hero = () => {
                         <div className="text-secondary mb-5 text-white">You can shoot me an email, send me a message on LinkedIn, or, if you prefer, use the contact form below.</div>
 
                         <label htmlFor="my-modal"></label>
-                        <input type="checkbox" id="my-modal" className="modal-toggle" readOnly=""/>
+                        <input type="checkbox" id="my-modal" className="modal-toggle" readOnly="" />
 
                         <div className="modal">
                             <div className="modal-box mx-16">
@@ -557,9 +557,10 @@ const Hero = () => {
                             onSubmit={handleSubmit}
                             className="p-10 card bg-base-200"
                         >
-                            {/* Hidden input for Netlify forms */}
+                            {/* Hidden input for Netlify form handling */}
                             <input type="hidden" name="form-name" value="contact" />
 
+                            {/* Your form fields */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Your name</span>

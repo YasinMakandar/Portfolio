@@ -40,7 +40,7 @@ const Hero = () => {
             setTimeout(() => setTooltipOpen(false), 2000); // Hide tooltip after 2 seconds
         });
     };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         
@@ -558,7 +558,7 @@ const Hero = () => {
                             className="p-10 card bg-base-200"
                         >
                             {/* Hidden input for Netlify forms */}
-                            <input type="hidden" name="contact" value="contact" />
+                            <input type="hidden" name="form-name" value="contact" />
 
                             <div className="form-control">
                                 <label className="label">

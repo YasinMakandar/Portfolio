@@ -40,25 +40,14 @@ const Hero = () => {
             setTimeout(() => setTooltipOpen(false), 2000); // Hide tooltip after 2 seconds
         });
     };
+    
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
-      
-        const formData = new FormData(e.target);
-      
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
-        })
-          .then(() => {
-            // Open the modal after successful submission
-            document.getElementById("my-modal").checked = true;
-          })
-          .catch((error) => {
-            console.error("Form submission error:", error);
-            alert("Something went wrong. Please try again.");
-          });
+        e.preventDefault();
+        
+        // Open the modal after the form is submitted
+        document.getElementById("my-modal").checked = true;
       };
+      
       
     
       const closeModal = () => {

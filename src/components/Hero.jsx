@@ -41,28 +41,30 @@ const Hero = () => {
         });
     };
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form submission behavior
       
-        // Serialize form data
         const formData = new FormData(e.target);
       
-        // Post form data to Netlify
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
           .then(() => {
-            // Trigger modal open
+            // Open the modal after successful submission
             document.getElementById("my-modal").checked = true;
           })
-          .catch((error) => alert(error));
+          .catch((error) => {
+            console.error("Form submission error:", error);
+            alert("Something went wrong. Please try again.");
+          });
       };
       
     
       const closeModal = () => {
-        setIsModalOpen(false);
+        document.getElementById("my-modal").checked = false; // Uncheck the modal to close it
       };
+      
 
     return (
         <>
@@ -567,7 +569,7 @@ const Hero = () => {
                             className="p-10 card bg-base-200"
                         >
                             {/* Hidden input for Netlify forms */}
-                            <input type="hidden" name="form-name" value="contact" />
+                            <input type="hidden" name="contact" value="contact" />
 
                             <div className="form-control">
                                 <label className="label">

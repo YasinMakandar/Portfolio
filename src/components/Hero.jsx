@@ -61,6 +61,9 @@ const Hero = () => {
         })
         .then(() => console.log('Form successfully submitted'))
         .catch((error) => alert(error));
+        
+
+        document.getElementById("my-modal").checked = true;
 
         event.target.reset()
       };

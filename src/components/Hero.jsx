@@ -686,7 +686,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="mt-10 text-xs">
-                            <p>Made with ❤️ by Yasin Makandar</p>
+                            <p>Made with ⌨️&🖱️ by Yasin Makandar</p>
                         </div>
                     </div>
                 </div>

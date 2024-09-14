@@ -42,9 +42,23 @@ const Hero = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Assuming form submission logic is successful
-        setIsModalOpen(true);
+      
+        // Serialize form data
+        const formData = new FormData(e.target);
+      
+        // Post form data to Netlify
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(() => {
+            // Trigger modal open
+            document.getElementById("my-modal").checked = true;
+          })
+          .catch((error) => alert(error));
       };
+      
     
       const closeModal = () => {
         setIsModalOpen(false);

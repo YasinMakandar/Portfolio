@@ -556,6 +556,7 @@ const Hero = () => {
                             data-netlify="true"
                             onSubmit={handleSubmit}
                             className="p-10 card bg-base-200"
+                            netlify hidden
                         >
                             {/* Hidden input for Netlify form handling */}
                             <input type="hidden" name="form-name" value="contact" />

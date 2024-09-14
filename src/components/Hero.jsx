@@ -53,20 +53,22 @@ const Hero = () => {
       
         const formData = new FormData(event.target);
       
-      
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
-        .then(() => console.log('Form successfully submitted'))
+        .then(() => {
+          console.log('Form successfully submitted');
+          // Open modal
+          document.getElementById("my-modal").checked = true;
+        })
         .catch((error) => alert(error));
-        
-
-        document.getElementById("my-modal").checked = true;
-
-        event.target.reset()
-      };
+      
+        // Reset the form
+        event.target.reset();
+    };
+    
 
 
 

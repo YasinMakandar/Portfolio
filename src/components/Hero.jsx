@@ -272,7 +272,7 @@ const Hero = () => {
                                         <span className="text-xs text-center">Django</span>
                                     </div>
                                 </div>
-                                <a className="btn btn-[white] mb-5 w-full z-1 relative undefined" href="https://github.com/YasinMakandar/Heart-Care" target="_blank" rel="noreferrer">GitHub</a>
+                                <a className="btn btn-[white] mb-5 w-full z-1 relative undefined" href="https://github.com/YasinMakandar/ProjectX" target="_blank" rel="noreferrer">GitHub</a>
                             </div>
                         </div>
                         <div className='w-full md:w-9/12 md:mx-auto lg:max-w-xl'>
